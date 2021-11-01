@@ -1,0 +1,56 @@
+.footer {
+  background: $trangnen;
+  padding: 50px 0px 70px 0px;
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    .footer-inner-left {
+      ul {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px !important;
+        li {
+          list-style: none;
+          @include text($xam, $text, medium);
+        }
+      }
+      p:nth-child(2) {
+        @include text(#b7bcc4, $text, medium);
+        margin-bottom: 10px !important;
+      }
+      p:nth-child(3) {
+        @include text(#b7bcc4, $text, medium);
+        margin-bottom: 10px !important;
+      }
+      p:nth-child(4) {
+        @include text(#b7bcc4, $text, medium);
+        margin-bottom: 30px !important;
+      }
+      p:nth-child(5) {
+        @include text(#b7bcc4, $text, medium);
+        margin-bottom: 30px !important;
+      }
+    }
+    .footer-inner-right {
+      ul {
+        display: flex;
+        gap: 5px;
+        li {
+          list-style: none;
+          background: #b7bcc4;
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          color: #f6f6f6;
+          text-align: center;
+          line-height: 35px;
+        }
+      }
+    }
+  }
+  @include respond-to("small") {
+    .footer-inner {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.speaking {
+  .speaking-inner {
+    background: $cam;
+    display: flex;
+    justify-content: space-evenly;
+
+    padding: 70px 100px;
+    .speaking-inner-left {
+      max-width: 400px;
+      img {
+        width: 100%;
+      }
+    }
+    .speaking-inner-right {
+      max-width: 400px;
+      p:nth-child(1) {
+        @include text($xam, $smallText, extrabold);
+        text-transform: uppercase;
+      }
+      p:nth-child(2) {
+        @include text($trang, $bigTitle, medium);
+        margin-bottom: 10px !important;
+      }
+      p:nth-child(3) {
+        @include text($trang, $text, medium);
+        margin-bottom: 30px !important;
+      }
+      button {
+        @include button($xam, 3px, 30px, 1px, transparent, 5px);
+        color: $trang;
+      }
+    }
+  }
+  .speaking-inner2 {
+    background: $trang;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+
+    padding: 70px 100px;
+    .speaking-inner-left {
+      max-width: 400px;
+      img {
+        width: 100%;
+      }
+    }
+    .speaking-inner-right {
+      text-align: right;
+      max-width: 400px;
+      p:nth-child(1) {
+        @include text($cam, $smallText, extrabold);
+        text-transform: uppercase;
+      }
+      p:nth-child(2) {
+        @include text($xam, $bigTitle, medium);
+        margin-bottom: 10px !important;
+      }
+      p:nth-child(3) {
+        @include text($xam, $text, medium);
+        margin-bottom: 30px !important;
+      }
+      button {
+        @include button($cam, 3px, 30px, 1px, transparent, 5px);
+        color: $trang;
+      }
+    }
+  }
+  @include respond-to("large") {
+    .speaking-inner {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 30px 15px;
+      .speaking-inner-right {
+        margin-top: 20px;
+        text-align: center !important;
+      }
+      .speaking-inner-left {
+      }
+    }
+    .speaking-inner2 {
+      padding: 30px 15px;
+      display: flex;
+      flex-wrap: wrap;
+      .speaking-inner-right {
+        margin-top: 20px;
+        text-align: center !important;
+      }
+      .speaking-inner-left {
+      }
+    }
+  }
+}

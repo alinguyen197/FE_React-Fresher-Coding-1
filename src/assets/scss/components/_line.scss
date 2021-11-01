@@ -1,0 +1,21 @@
+.line {
+  background-image: url(../../../components/Line/10f300de-0edc-449d-9959-0b4535664720.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 0px;
+  .line-inner {
+    text-align: center;
+    p:first-child {
+      margin-bottom: 10px !important;
+      @include text($trang, $bigTitle, extrabold);
+    }
+    p:nth-child(2) {
+      margin-bottom: 10px !important;
+      @include text($trang, $text, medium);
+    }
+    button {
+      @include button($trang, 3px, 30px, 1px, transparent, 5px);
+    }
+  }
+}

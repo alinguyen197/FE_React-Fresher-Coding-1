@@ -1,0 +1,111 @@
+.header {
+  background-image: url("../../../components/Header/black-furniture-chair-room-office-chair-black-and-white-1616353-pxhere.com.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  position: relative;
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    .logo {
+      @include text($trang, $title, extrabold);
+    }
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        cursor: pointer;
+        margin-right: 10px;
+        @include text($trang, 16px, medium);
+        list-style: none;
+        text-transform: uppercase;
+      }
+      li:first-child {
+        @include button(transparent, 3px, 20px, 1px, $trang, 5px);
+      }
+      li:last-child {
+        @include button($cam, 3px, 20px, 1px, "", 5px);
+      }
+    }
+    .menu-toggle {
+      display: none;
+      color: $trang;
+      i {
+        font-size: 30px;
+      }
+    }
+  }
+  .side-panel {
+    background: $xam;
+    position: fixed;
+    z-index: 5;
+    height: 100vh;
+    width: 0;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    transition: all 1s;
+    button {
+      background: transparent;
+      color: $trang;
+      border: none;
+      font-size: 30px;
+      padding: 0px 10px;
+    }
+    .my-side-bar-inner {
+      li {
+        text-align: center;
+        margin: 30px;
+        @include text($trang, 16px, medium);
+        list-style: none;
+        text-transform: uppercase;
+      }
+      li:first-child {
+        @include button(transparent, 3px, 20px, 1px, $trang, 5px);
+      }
+      li:last-child {
+        @include button($cam, 3px, 20px, 1px, "", 5px);
+      }
+    }
+  }
+  .header-content {
+    padding: 80px 0px;
+    text-align: center;
+    p:nth-child(1) {
+      @include text($trang, $bigTitle, extrabold);
+      margin-bottom: 20px !important;
+    }
+    p:nth-child(2) {
+      @include text($trang, $text, regular);
+      margin-bottom: 20px !important;
+    }
+    button {
+      @include button($cam, 3px, 30px, 1px, transparent, 5px);
+      @include text($trang, $text, medium);
+    }
+  }
+  @include respond-to("small") {
+    .header-nav {
+      ul {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+    .header-content {
+      p:nth-child(1) {
+        @include text($trang, 25px, extrabold);
+      }
+      p:nth-child(2) {
+        @include text($trang, $smallText, regular);
+      }
+    }
+  }
+}
